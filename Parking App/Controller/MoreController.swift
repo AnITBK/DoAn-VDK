@@ -15,6 +15,7 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var totalTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var histories: [String]?
+    var headersDays: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,10 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             return
                         }
                         self.histories = data["history"] as? [String] ?? [String]()
+                        guard var histories = self.histories else { return }
+                        self.reverseHistories(histories: &histories)
+                        self.histories = histories
+                        self.handleHistories(histories: self.histories ?? [String]())
                         self.totalTime.text = "Total: \(self.histories?.count ?? 0) times"
                         self.tableView.reloadData()
                 }
@@ -55,9 +60,48 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    fileprivate func handleHistories(histories: [String]) {
+        headersDays = [String]()
+        for history in histories {
+            //Request: Open --- Time: Sat Apr 27 2019 17:19:33 GMT+0700 (Indochina Time) --- Failed
+            let indexFrom = history.index(history.firstIndex(of: "-")!, offsetBy: 10)
+            let indexTo = history.index(history.firstIndex(of: "-")!, offsetBy: 25)
+            let time = String(history[indexFrom...indexTo])
+            if time != (headersDays?.last ?? "") {
+                headersDays?.append(time)
+            }
+        }
+    }
+    
+    fileprivate func reverseHistories(histories: inout [String]){
+        if histories.count > 0 {
+            var j = histories.count - 1
+            for i in 0..<histories.count/2 {
+                let history = histories[i]
+                histories[i] = histories[j]
+                histories[j] = history
+                j -= 1
+            }
+        }
+        print("aaa",histories)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return headersDays?[section] ?? ""
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return headersDays?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return histories?.count ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell") as! HistoryCell
         let history = histories?[indexPath.row] ?? ""

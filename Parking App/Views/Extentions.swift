@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UIView {
     func cornerImage(_ cornerRadius: CGFloat){
         layer.borderWidth = 4

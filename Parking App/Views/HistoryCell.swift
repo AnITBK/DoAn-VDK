@@ -26,7 +26,7 @@ class HistoryCell: UITableViewCell {
         timeLabel.text = request + " - " + time
         viewBoundContent.layer.shadowColor = UIColor.gray.cgColor
         viewBoundContent.layer.shadowOffset = CGSize(width: 1, height: 1)
-        if history.contains("Exit") && history.contains("Succeed") {
+        if history.contains("Exit") && history.contains("Succceed") {
             imageFailedOrSucess.image = #imageLiteral(resourceName: "out_Success")
         }
         if history.contains("Exit") && history.contains("Failed") {
