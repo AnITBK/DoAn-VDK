@@ -26,7 +26,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setTextField()
-        
         if let email = UserDefaults.standard.object(forKey: "email")  as? String, let password = UserDefaults.standard.object(forKey: "password") as? String{
             emailTxt.text = email
             passwordTxt.text = password
