@@ -1,21 +1,22 @@
 //
-//  SplashController.swift
+//  EditProfileController.swift
 //  Parking App
 //
-//  Created by An Nguyễn on 4/21/19.
+//  Created by An Nguyễn on 4/27/19.
 //  Copyright © 2019 An Nguyễn. All rights reserved.
 //
 
 import UIKit
 
-class SplashController: UIViewController {
+class EditProfileController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
- 
+
     /*
     // MARK: - Navigation
 

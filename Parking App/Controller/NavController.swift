@@ -1,5 +1,5 @@
 //
-//  RegisterController.swift
+//  NavController.swift
 //  Parking App
 //
 //  Created by An Nguyễn on 4/27/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController {
+class NavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
