@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E2032D3226CA800003369F0 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2032D2226CA800003369F0 /* SplashController.swift */; };
 		8E270B8B225DF38F00B3BE33 /* GoogleService-InfoG.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E270B8A225DF38F00B3BE33 /* GoogleService-InfoG.plist */; };
-		8E270B8D225E079F00B3BE33 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E270B8C225E079F00B3BE33 /* RegisterController.swift */; };
 		8E270B8F225E13EF00B3BE33 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E270B8E225E13EF00B3BE33 /* LoginController.swift */; };
-		8E5220A9225B8ECA00C051E2 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5220A7225B8ECA00C051E2 /* QRScannerController.swift */; };
-		8E5220AA225B8ECA00C051E2 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5220A8225B8ECA00C051E2 /* QRCodeViewController.swift */; };
+		8E8A9657226F6E5B008A3834 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A9656226F6E5B008A3834 /* CustomButton.swift */; };
+		8E90D80722749FA80014D634 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90D80622749FA80014D634 /* NavController.swift */; };
+		8E90D80B2274A5D30014D634 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90D80A2274A5D30014D634 /* CustomView.swift */; };
 		8EAE04E1225CD3C90000F2C1 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E0225CD3C90000F2C1 /* Member.swift */; };
-		8EAE04E3225CD3D30000F2C1 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E2225CD3D30000F2C1 /* Guest.swift */; };
 		8EAE04E5225CD40F0000F2C1 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E4225CD40F0000F2C1 /* Extentions.swift */; };
+		8EB11E4F2273097D00221F61 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB11E4E2273097D00221F61 /* CustomTextField.swift */; };
 		8EB70877225B45400079AAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB70876225B45400079AAE2 /* AppDelegate.swift */; };
-		8EB70879225B45400079AAE2 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB70878225B45400079AAE2 /* StartController.swift */; };
 		8EB7087C225B45400079AAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB7087A225B45400079AAE2 /* Main.storyboard */; };
 		8EB7087F225B45400079AAE2 /* Parking_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7087D225B45400079AAE2 /* Parking_App.xcdatamodeld */; };
 		8EB70881225B45410079AAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB70880225B45410079AAE2 /* Assets.xcassets */; };
@@ -26,6 +24,10 @@
 		8EB7088E225B4AEB0079AAE2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7088D225B4AEB0079AAE2 /* ProfileController.swift */; };
 		8EB70890225B4AF80079AAE2 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7088F225B4AF80079AAE2 /* MoreController.swift */; };
 		8EB70892225B4DE30079AAE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB70891225B4DE30079AAE2 /* GoogleService-Info.plist */; };
+		8EC881A22274BBA600A40091 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC881A12274BBA600A40091 /* RegisterController.swift */; };
+		8ED194532273EA26004EA4CB /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED194522273EA26004EA4CB /* HistoryCell.swift */; };
+		8ED19455227407E1004EA4CB /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED19454227407E1004EA4CB /* EditProfileController.swift */; };
+		8ED1945722740A27004EA4CB /* CycleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1945622740A27004EA4CB /* CycleImage.swift */; };
 		9B9EF5CF73276682A246D148 /* Pods_Parking_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525AB1636BF03C6CE345E21B /* Pods_Parking_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,18 +35,16 @@
 		463D6E25507DF2CC22320DDF /* Pods-Parking App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parking App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parking App/Pods-Parking App.debug.xcconfig"; sourceTree = "<group>"; };
 		525AB1636BF03C6CE345E21B /* Pods_Parking_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parking_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C5E5AAE66ADE85EE6F367A /* Pods-Parking App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parking App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parking App/Pods-Parking App.release.xcconfig"; sourceTree = "<group>"; };
-		8E2032D2226CA800003369F0 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8E270B8A225DF38F00B3BE33 /* GoogleService-InfoG.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-InfoG.plist"; sourceTree = "<group>"; };
-		8E270B8C225E079F00B3BE33 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		8E270B8E225E13EF00B3BE33 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		8E5220A7225B8ECA00C051E2 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
-		8E5220A8225B8ECA00C051E2 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		8E8A9656226F6E5B008A3834 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8E90D80622749FA80014D634 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		8E90D80A2274A5D30014D634 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		8EAE04E0225CD3C90000F2C1 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		8EAE04E2225CD3D30000F2C1 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		8EAE04E4225CD40F0000F2C1 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		8EB11E4E2273097D00221F61 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8EB70873225B45400079AAE2 /* Parking App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parking App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB70876225B45400079AAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EB70878225B45400079AAE2 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		8EB7087B225B45400079AAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EB7087E225B45400079AAE2 /* Parking_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Parking_App.xcdatamodel; sourceTree = "<group>"; };
 		8EB70880225B45410079AAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +54,10 @@
 		8EB7088D225B4AEB0079AAE2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		8EB7088F225B4AF80079AAE2 /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		8EB70891225B4DE30079AAE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EC881A12274BBA600A40091 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		8ED194522273EA26004EA4CB /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		8ED19454227407E1004EA4CB /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
+		8ED1945622740A27004EA4CB /* CycleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				8EAE04E4225CD40F0000F2C1 /* Extentions.swift */,
+				8E8A9656226F6E5B008A3834 /* CustomButton.swift */,
+				8EB11E4E2273097D00221F61 /* CustomTextField.swift */,
+				8ED194522273EA26004EA4CB /* HistoryCell.swift */,
+				8ED1945622740A27004EA4CB /* CycleImage.swift */,
+				8E90D80A2274A5D30014D634 /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -88,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				8EAE04E0225CD3C90000F2C1 /* Member.swift */,
-				8EAE04E2225CD3D30000F2C1 /* Guest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,15 +140,13 @@
 		8EB70893225B4E570079AAE2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E2032D2226CA800003369F0 /* SplashController.swift */,
-				8EB70878225B45400079AAE2 /* StartController.swift */,
-				8E270B8C225E079F00B3BE33 /* RegisterController.swift */,
 				8E270B8E225E13EF00B3BE33 /* LoginController.swift */,
+				8EC881A12274BBA600A40091 /* RegisterController.swift */,
 				8EB7088B225B4AD80079AAE2 /* HomeController.swift */,
 				8EB7088D225B4AEB0079AAE2 /* ProfileController.swift */,
 				8EB7088F225B4AF80079AAE2 /* MoreController.swift */,
-				8E5220A8225B8ECA00C051E2 /* QRCodeViewController.swift */,
-				8E5220A7225B8ECA00C051E2 /* QRScannerController.swift */,
+				8ED19454227407E1004EA4CB /* EditProfileController.swift */,
+				8E90D80622749FA80014D634 /* NavController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,7 +172,6 @@
 				8EB70870225B45400079AAE2 /* Frameworks */,
 				8EB70871225B45400079AAE2 /* Resources */,
 				6DA109EE15BAFC36EFF375E7 /* [CP] Embed Pods Frameworks */,
-				2E82FD09057CC8B393B2ACD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,26 +250,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2E82FD09057CC8B393B2ACD3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Parking App/Pods-Parking App-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parking App/Pods-Parking App-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6DA109EE15BAFC36EFF375E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,12 +257,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Parking App/Pods-Parking App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -287,12 +267,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -312,20 +287,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E90D80B2274A5D30014D634 /* CustomView.swift in Sources */,
 				8E270B8F225E13EF00B3BE33 /* LoginController.swift in Sources */,
-				8EAE04E3225CD3D30000F2C1 /* Guest.swift in Sources */,
-				8EB70879225B45400079AAE2 /* StartController.swift in Sources */,
+				8E90D80722749FA80014D634 /* NavController.swift in Sources */,
 				8EB7087F225B45400079AAE2 /* Parking_App.xcdatamodeld in Sources */,
-				8E5220AA225B8ECA00C051E2 /* QRCodeViewController.swift in Sources */,
 				8EB7088E225B4AEB0079AAE2 /* ProfileController.swift in Sources */,
 				8EAE04E1225CD3C90000F2C1 /* Member.swift in Sources */,
+				8EB11E4F2273097D00221F61 /* CustomTextField.swift in Sources */,
+				8ED19455227407E1004EA4CB /* EditProfileController.swift in Sources */,
+				8ED1945722740A27004EA4CB /* CycleImage.swift in Sources */,
 				8EAE04E5225CD40F0000F2C1 /* Extentions.swift in Sources */,
-				8E5220A9225B8ECA00C051E2 /* QRScannerController.swift in Sources */,
 				8EB70890225B4AF80079AAE2 /* MoreController.swift in Sources */,
-				8E270B8D225E079F00B3BE33 /* RegisterController.swift in Sources */,
+				8E8A9657226F6E5B008A3834 /* CustomButton.swift in Sources */,
+				8EC881A22274BBA600A40091 /* RegisterController.swift in Sources */,
 				8EB70877225B45400079AAE2 /* AppDelegate.swift in Sources */,
-				8E2032D3226CA800003369F0 /* SplashController.swift in Sources */,
 				8EB7088C225B4AD80079AAE2 /* HomeController.swift in Sources */,
+				8ED194532273EA26004EA4CB /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +451,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG8WKWH7TV;
 				INFOPLIST_FILE = "Parking App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,7 +473,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SG8WKWH7TV;
 				INFOPLIST_FILE = "Parking App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

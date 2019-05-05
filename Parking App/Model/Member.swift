@@ -7,20 +7,34 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol Person {
-    var RFID: Int {get}
-    var lastActivity: Date {set get}
+    var mssv: String {set get}
+    var password: String {set get}
+    var RFID: Int {set get}
+    var lastActivity: Timestamp {set get}
     var name: String {set get}
     var isCurrentlyIn: Bool {get}
     var plate: String {set get}
     var cClass: String {set get}
+    var subscribeUntil: Timestamp {set get}
+    var history: [String] {get set}
 }
 
 struct Member: Person {
+    
+    var subscribeUntil: Timestamp
+    
+    var mssv: String
+    
+    var password: String
+    
+    var history: [String]
+    
     var RFID: Int
     
-    var lastActivity: Date
+    var lastActivity: Timestamp
     
     var name: String
     

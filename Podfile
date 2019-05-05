@@ -4,12 +4,6 @@
 target 'Parking App' do
  
  pod 'Firebase/Core'
- pod 'Firebase/Auth'
- pod 'FBSDKLoginKit'
- pod 'FBSDKCoreKit'
  pod 'Firebase/Firestore'
- pod 'GoogleSignIn'
-
-
 
 end

@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FBSDKLoginKit
-import GoogleSignIn
 import FirebaseFirestore
 import FirebaseCore
 
@@ -17,108 +14,62 @@ class HomeController: UIViewController {
 
     var imageView: UIImageView!
     @IBOutlet weak var viewAboutUs: UIView!
-    @IBOutlet weak var qrButton: UIButton!
+    @IBOutlet weak var numberOfDaysLeft: UILabel!
+    @IBOutlet var inforLabel: [UILabel]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.largeTitleDisplayMode = .always
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Home"
+        navigationController?.navigationBar.barTintColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 0.8)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
         imageView = UIImageView()
         imageView.frame = CGRect(x: view.bounds.width/2 - 100, y: 350, width: 200, height: 200)
         view.addSubview(imageView)
         imageView.isHidden = true
-        viewAboutUs.borderView(5, UIColor.black)
-        qrButton.borderView(8, UIColor.white)
-        qrButton.setTitleColor(UIColor.white, for: .normal)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        navigationController?.isNavigationBarHidden = false
+        viewAboutUs.borderView(5, UIColor.white)
+        inforLabel.forEach { (label) in
+            label.textColor = UIColor.white
+        }
+        numberOfDaysLeft.textColor = .white
         
-    }
-    
-    @IBAction func qrButton(_ sender: Any) {
-        var idOp: String?
-        var emailOp: String?
-        if let user = Auth.auth().currentUser {
-            idOp = user.email! + user.providerID
-            emailOp = user.email
-        }
-        if let user = GIDSignIn.sharedInstance()?.currentUser {
-            idOp = user.userID
-            emailOp = user.profile.email
-        }
-        if let user = FBSDKAccessToken.current() {
-            idOp = user.userID
-            FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email, gender"])?.start(completionHandler: { (connection, result, error) in
-                if error != nil {
-                    print("Failed to start graph request!", error as Any)
-                    return
-                }
-                if let results = result as? [String: Any] {
-                    let em = results["email"] as? String
-                    emailOp = em
-                }
-                if let id = idOp, let email = emailOp {
-                    let image = self.generateQRCode(from: id)
-                    self.imageView.image = image
-                    self.imageView.isHidden = !self.imageView.isHidden
-                    if !self.imageView.isHidden {
-                        let db = Firestore.firestore()
-                        let settings = db.settings
-                        settings.areTimestampsInSnapshotsEnabled = true
-                        db.settings = settings
-                        db.collection("tickets").document("\(email)").setData([
-                            "id": "\(id)"
-                        ]) { (error) in
-                            if let err = error {
-                                print("Error adding document: \(err)")
-                                return
-                            }
-                            print("Document added with email: \(email)")
-                            self.createAlert(title: "Success", message: "Welcome to your parking!")
-                        }
-                    }
-                }
-            })
-        }
-        if let id = idOp, let email = emailOp {
-            let image = generateQRCode(from: id)
-            imageView.image = image
-            imageView.isHidden = !imageView.isHidden
-            if !self.imageView.isHidden {
-                let db = Firestore.firestore()
-                let settings = db.settings
-                settings.areTimestampsInSnapshotsEnabled = true
-                db.settings = settings
-                db.collection("tickets").document("\(email)").setData([
-                    "id": "\(id)"
-                ]) { (error) in
-                    if let err = error {
-                        print("Error adding document: \(err)")
+        let db = Firestore.firestore()
+        let settings = db.settings
+        db.settings = settings
+        if let documentID = UserDefaults.standard.value(forKey: "documentID") as? String {
+            db.collection("members").document(documentID)
+                .addSnapshotListener { documentSnapshot, error in
+                    guard let document = documentSnapshot else {
+                        print("Error fetching document: \(error!)")
                         return
                     }
-                    print("Document added with email: \(email)")
-                    self.createAlert(title: "Success", message: "Welcome to your parking!")
-                }
+                    guard let data = document.data() else {
+                        print("Document data was empty.")
+                        return
+                    }
+                    let subscribeUntil = data["subscribeUntil"] as? Timestamp ?? Timestamp(date: Date())
+                    let rfid = data["RFID"] as? Int ?? 0
+                    let dateSubscribeUntil = subscribeUntil.dateValue()
+                    let daysLeft = self.numberOfDaysLeft(dateUntil: dateSubscribeUntil)
+                    let dateFormater = DateFormatter()
+                    dateFormater.dateFormat = "hh:mm:ss  dd-MM-yyyy"
+                    let dateStr = dateFormater.string(from: dateSubscribeUntil)
+                    if rfid == 0 {
+                        self.numberOfDaysLeft.text = "You were register but receive card not yet, please go to our counter pay fee and get your card. Thank you!"
+                    }else {
+                        if daysLeft == 0 {
+                            self.numberOfDaysLeft.text = "Please charge more at our counter. Your card has expired form \(dateStr) !"
+                        }else{
+                            self.numberOfDaysLeft.text = "Your account has \(daysLeft) days left !"
+                        }
+                    }
+                    
+                    
             }
         }
-    }
-    
-    internal func generateQRCode(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
-            if let output = filter.outputImage?.transformed(by: transform) {
-                return UIImage(ciImage: output)
-            }
-        }
-        return nil
+        
     }
     
     fileprivate func createAlert(title: String, message: String){
@@ -128,4 +79,38 @@ class HomeController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    fileprivate func numberOfDaysLeft(dateUntil: Date) -> Int{
+        let dateCurrent = Date()
+        let calendar = Calendar.current
+        let dayUntil = calendar.component(Calendar.Component.day, from: dateUntil)
+        let monthUntil = calendar.component(Calendar.Component.month, from: dateUntil)
+        //let yearUntil = calendar.component(Calendar.Component.year, from: dateUntil)
+        let dayCurrent = calendar.component(Calendar.Component.day, from: dateCurrent)
+        let monthCurrent = calendar.component(Calendar.Component.month, from: dateCurrent)
+        let yearCurrent = calendar.component(Calendar.Component.year, from: dateCurrent)
+        let dayOfMonthCurrent = dayOfMonth(month: monthCurrent, year: yearCurrent)
+        
+        if monthCurrent == monthUntil {
+            return dayUntil - dayCurrent
+        }else if monthUntil > monthCurrent {
+            return dayOfMonthCurrent - dayCurrent + dayUntil
+        }else {
+            return 0
+        }
+        
+    }
+    
+    fileprivate func dayOfMonth(month: Int, year: Int) -> Int{
+        switch month {
+        case 1,3,5,7,8,10,12:
+            return 31
+        case 4,6,9,11:
+            return 30
+        case 2:
+            return (((year % 4 == 0) && (year % 100 != 0 )) || (year % 400 == 0)) ? 29: 28
+        default:
+            return 0
+        }
+        
+    }
 }

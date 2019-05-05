@@ -18,16 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-9n-LhQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin" translatesAutoresizingMaskIntoConstraints="NO" id="haV-Pz-R2y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin-1" translatesAutoresizingMaskIntoConstraints="NO" id="k09-oo-eRH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5fS-9n-LhQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BMM-QQ-3LT"/>
-                            <constraint firstAttribute="bottom" secondItem="5fS-9n-LhQ" secondAttribute="bottom" id="Piq-mD-pIw"/>
-                            <constraint firstAttribute="trailing" secondItem="5fS-9n-LhQ" secondAttribute="trailing" id="SSR-fT-GSV"/>
-                            <constraint firstItem="5fS-9n-LhQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="TJn-pz-wax"/>
+                            <constraint firstItem="haV-Pz-R2y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4YS-hY-MDm"/>
+                            <constraint firstItem="k09-oo-eRH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5hB-T1-SD9"/>
+                            <constraint firstItem="haV-Pz-R2y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cg5-Jn-u5a"/>
+                            <constraint firstItem="k09-oo-eRH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GRH-pC-8Xz"/>
+                            <constraint firstItem="k09-oo-eRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TWY-bZ-eLo"/>
+                            <constraint firstItem="k09-oo-eRH" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="V9B-nm-ApP"/>
+                            <constraint firstItem="haV-Pz-R2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iql-aR-pG4"/>
+                            <constraint firstItem="haV-Pz-R2y" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="jIc-bC-ddn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,5 +46,6 @@
     </scenes>
     <resources>
         <image name="bgLogin" width="375" height="667"/>
+        <image name="bgLogin-1" width="375" height="667"/>
     </resources>
 </document>

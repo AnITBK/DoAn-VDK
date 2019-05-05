@@ -40,7 +40,7 @@
 	<key>FacebookAppID</key>
 	<string>282971522617726</string>
 	<key>FacebookDisplayName</key>
-	<string>Parking App</string>
+	<string>App Parking Admin</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -63,8 +63,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
