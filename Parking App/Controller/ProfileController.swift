@@ -27,13 +27,12 @@ class ProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profile"
-        navigationController?.navigationBar.barTintColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 0.8)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationItem.rightBarButtonItem?.tintColor = .white
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold)]
+        navigationItem.rightBarButtonItem?.tintColor = .black
+        navigationController?.navigationBar.tintColor = UIColor.black
         profileImage.cornerImage(profileImage.bounds.width/2)
         setInformation()
-        
     }
     
     @IBAction func logoutButton(_ sender: Any) {
@@ -74,7 +73,6 @@ class ProfileController: UIViewController {
                             print("Document data was empty.")
                             return
                         }
-
                         let mssv = data["MSSV"] as? String ?? ""
                         let rfid = data["RFID"] as? Int ?? 0
                         let class1 = data["class"] as? String ?? ""
@@ -91,10 +89,8 @@ class ProfileController: UIViewController {
                         }else {
                             self.lastActivityLabel.text = "Last activity: \(self.convertDateTime(date: lastActivity.dateValue()))"
                         }
-                        
                         self.rfidLabel.text = "RFID: \(rfid)"
                         self.plateLabel.text = "Plate: \(plate)"
-                        
                 }
             }
         }

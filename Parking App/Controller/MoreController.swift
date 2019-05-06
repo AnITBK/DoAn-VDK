@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 
-class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MoreController: UIViewController {
     
     @IBOutlet weak var totalTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -20,9 +20,9 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "History"
-        navigationController?.navigationBar.barTintColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 0.8)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold)]
+        navigationController?.navigationBar.tintColor = UIColor.black
         tableView.delegate = self
         tableView.dataSource = self
         fetchData()
@@ -83,11 +83,20 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 j -= 1
             }
         }
-        print("aaa",histories)
     }
+}
+
+extension MoreController:  UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return headersDays?[section] ?? ""
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let viewForHeader = UIView()
+        viewForHeader.backgroundColor = UIColor.lightBlue
+        let labelHeader = UILabel(frame: CGRect(x: 5, y: 0, width: view.bounds.width, height: 50))
+        labelHeader.textColor = UIColor.black
+        labelHeader.font = UIFont.systemFont(ofSize: 20, weight: .thin)
+        labelHeader.text = headersDays?[section] ?? ""
+        viewForHeader.addSubview(labelHeader)
+        return viewForHeader
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -99,11 +108,12 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell") as! HistoryCell
+        cell.backgroundColor = UIColor.tealColor
         let history = histories?[indexPath.row] ?? ""
         cell.setupCell(history: history)
         return cell
@@ -123,12 +133,10 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-
 }

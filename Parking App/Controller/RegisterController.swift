@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class RegisterController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var constraintBottom: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var usernameTextField: CustomTextField!
     @IBOutlet weak var classTextField: CustomTextField!
@@ -24,14 +25,12 @@ class RegisterController: UIViewController, UITextFieldDelegate {
     private var plateData:[String] = []
     var textFieldActive: UITextField?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.barTintColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 0.8)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold)]
+        navigationController?.navigationBar.tintColor = UIColor.black
         setupUI()
         let db = Firestore.firestore()
         let settings = db.settings
@@ -49,6 +48,10 @@ class RegisterController: UIViewController, UITextFieldDelegate {
                 self.plateData.append(plateStr)
             }
         })
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        scrollView.addGestureRecognizer(tap)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -57,6 +60,10 @@ class RegisterController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(true)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: self)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: self)
+    }
+    
+    @objc func handleTap(){
+        view.endEditing(true)
     }
     
     @objc func keyboardWillShow(notification: Notification){
@@ -68,7 +75,7 @@ class RegisterController: UIViewController, UITextFieldDelegate {
             var viewRect = self.view.frame
             viewRect.size.height -= keyboardHeight
             guard let activeField = textFieldActive else { return }
-            if viewRect.contains(activeField.frame.origin) {
+            if viewRect.contains(activeField.frame.origin) && activeField.frame.maxY > (view.bounds.height - keyboardHeight + 20) {
                 let scrollPoint = CGPoint(x: 0, y: activeField.frame.origin.y - keyboardHeight)
                 self.scrollView.setContentOffset(scrollPoint, animated: true)
             }
@@ -103,6 +110,12 @@ class RegisterController: UIViewController, UITextFieldDelegate {
     
     @objc func hadleCheckPlate(sender: UITextField){
         handleRegisterButton()
+        if let mssvStr = mssvTextField.text {
+            let isMSSVAlready1 = checkIsMSSVAlreadyExist(arrData: mssvData, str: mssvStr)
+            if !isMSSVAlready1 && mssvStr.count == 9 {
+                mssvTextField.textColor = .black
+            }
+        }
         if let plateStr = sender.text {
             let isMSSVAlready1 = checkIsMSSVAlreadyExist(arrData: plateData, str: plateStr)
             print(plateData)
@@ -116,7 +129,7 @@ class RegisterController: UIViewController, UITextFieldDelegate {
                 }
                 let alert = UIAlertController(title: "\(plateStr) already exists", message: "Re-type Plate", preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                    self.mssvTextField.becomeFirstResponder()
+                    self.plateTextField.becomeFirstResponder()
                     return
                 })
                 alert.addAction(alertAction)
@@ -144,6 +157,9 @@ class RegisterController: UIViewController, UITextFieldDelegate {
                 })
                 alert.addAction(alertAction)
                 self.present(alert, animated: true, completion: nil)
+            }
+            if !isMSSVAlready1 && mssvStr.count == 9 {
+                sender.textColor = .black
             }
         }
     }
@@ -203,11 +219,6 @@ class RegisterController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        usernameTextField.becomeFirstResponder()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.isNavigationBarHidden = false
@@ -237,14 +248,19 @@ class RegisterController: UIViewController, UITextFieldDelegate {
             "name": "\(name)",
             "password": "\(password)",
             "plate": "\(plate)",
-            "subscribeUntil": Timestamp(date: Date())
+            "subscribeUntil": Timestamp(date: Date()),
+            "lastActivity": Timestamp(date: Date())
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added.")
-                self.createAlert(title: "Register succeed!", message: "Created account successfuly Back to login.")
-                self.navigationController?.popViewController(animated: true)
+                let alert = UIAlertController(title: "Register succeed!", message: "Created account successfuly Back to login.", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
+                    self.navigationController?.popViewController(animated: true)
+                }
+                alert.addAction(alertAction)
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

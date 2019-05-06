@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class LoginController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -33,6 +34,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         }
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         scrollView.addGestureRecognizer(tap)
+        animateLogo()
     }
     
     @objc func dismissKeyboard(){
@@ -48,7 +50,15 @@ class LoginController: UIViewController, UITextFieldDelegate {
         navigationController?.isNavigationBarHidden = true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    fileprivate func animateLogo(){
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, options: [.repeat, .transitionCurlUp, .autoreverse], animations: {
+            self.imageLogo.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }) { (_) in
+        }
+        
+    }
+    
+    fileprivate func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if emailTxt.becomeFirstResponder() {
             passwordTxt.becomeFirstResponder()
         }

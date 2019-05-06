@@ -10,6 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 class EditProfileController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var contraintBottom: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var changeButton: CustomButton!
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -20,6 +21,8 @@ class EditProfileController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mssvLabel: UITextField!
     @IBOutlet weak var passwordTextfield: CustomTextField!
     @IBOutlet weak var re_typePasswordTextField: CustomTextField!
+    var textFieldActive: UITextField?
+
     
     private var mssvData:[String] = [String]()
     private var plateData:[String] = [String]()
@@ -97,9 +100,9 @@ class EditProfileController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Edit profile"
-        navigationController?.navigationBar.barTintColor = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 0.8)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .bold)]
+        navigationController?.navigationBar.tintColor = UIColor.black
         setupUI()
         
         let db = Firestore.firestore()
@@ -118,6 +121,14 @@ class EditProfileController: UIViewController, UITextFieldDelegate {
                 self.plateData.append(plateStr)
             }
         })
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: self)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: self)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -129,8 +140,29 @@ class EditProfileController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @objc func keyboardWillShow(notification: Notification){
+        guard let keyboardInfor = notification.userInfo else { return }
+        if let keyboardSize = (keyboardInfor[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size {
+            let keyboardHeight = keyboardSize.height + 10
+            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            self.scrollView.contentInset = contentInsets
+            var viewRect = self.view.frame
+            viewRect.size.height -= keyboardHeight
+            guard let activeField = textFieldActive else { return }
+            if viewRect.contains(activeField.frame.origin) && activeField.frame.maxY > (view.bounds.height - keyboardHeight + 20) {
+                let scrollPoint = CGPoint(x: 0, y: activeField.frame.origin.y - keyboardHeight)
+                self.scrollView.setContentOffset(scrollPoint, animated: true)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification){
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+    }
+    
     fileprivate func setupUI(){
-        
+        textFieldActive = UITextField()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         scrollView.addGestureRecognizer(tap)
         saveButton.isEnabled = false
@@ -241,6 +273,10 @@ class EditProfileController: UIViewController, UITextFieldDelegate {
                 })
                 alert.addAction(alertAction)
                 self.present(alert, animated: true, completion: nil)
+            }
+            
+            if !isMSSVAlready1 && mssvStr.count == 9 {
+                sender.textColor = .black
             }
         }
     }

@@ -13,7 +13,7 @@
 		8E90D80722749FA80014D634 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90D80622749FA80014D634 /* NavController.swift */; };
 		8E90D80B2274A5D30014D634 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90D80A2274A5D30014D634 /* CustomView.swift */; };
 		8EAE04E1225CD3C90000F2C1 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E0225CD3C90000F2C1 /* Member.swift */; };
-		8EAE04E5225CD40F0000F2C1 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E4225CD40F0000F2C1 /* Extentions.swift */; };
+		8EAE04E5225CD40F0000F2C1 /* Extentions + Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE04E4225CD40F0000F2C1 /* Extentions + Colors.swift */; };
 		8EB11E4F2273097D00221F61 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB11E4E2273097D00221F61 /* CustomTextField.swift */; };
 		8EB70877225B45400079AAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB70876225B45400079AAE2 /* AppDelegate.swift */; };
 		8EB7087C225B45400079AAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB7087A225B45400079AAE2 /* Main.storyboard */; };
@@ -41,7 +41,7 @@
 		8E90D80622749FA80014D634 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		8E90D80A2274A5D30014D634 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		8EAE04E0225CD3C90000F2C1 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		8EAE04E4225CD40F0000F2C1 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		8EAE04E4225CD40F0000F2C1 /* Extentions + Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions + Colors.swift"; sourceTree = "<group>"; };
 		8EB11E4E2273097D00221F61 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8EB70873225B45400079AAE2 /* Parking App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parking App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB70876225B45400079AAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		8E5220AB225B915900C051E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8EAE04E4225CD40F0000F2C1 /* Extentions.swift */,
+				8EAE04E4225CD40F0000F2C1 /* Extentions + Colors.swift */,
 				8E8A9656226F6E5B008A3834 /* CustomButton.swift */,
 				8EB11E4E2273097D00221F61 /* CustomTextField.swift */,
 				8ED194522273EA26004EA4CB /* HistoryCell.swift */,
@@ -296,7 +296,7 @@
 				8EB11E4F2273097D00221F61 /* CustomTextField.swift in Sources */,
 				8ED19455227407E1004EA4CB /* EditProfileController.swift in Sources */,
 				8ED1945722740A27004EA4CB /* CycleImage.swift in Sources */,
-				8EAE04E5225CD40F0000F2C1 /* Extentions.swift in Sources */,
+				8EAE04E5225CD40F0000F2C1 /* Extentions + Colors.swift in Sources */,
 				8EB70890225B4AF80079AAE2 /* MoreController.swift in Sources */,
 				8E8A9657226F6E5B008A3834 /* CustomButton.swift in Sources */,
 				8EC881A22274BBA600A40091 /* RegisterController.swift in Sources */,
@@ -453,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SG8WKWH7TV;
 				INFOPLIST_FILE = "Parking App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SG8WKWH7TV;
 				INFOPLIST_FILE = "Parking App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7OV-DC-9F1">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="hPT-dW-TES" customClass="ProfileController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nyC-uq-2D4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daj-Kb-Fm4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwQ-E0-Yn9" customClass="CustomView" customModule="Parking_App" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="335" height="409"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="610"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-Mn-hYn">
-                                                <rect key="frame" x="117.5" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="137" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="7Fi-Lr-QBS"/>
                                                     <constraint firstAttribute="width" constant="100" id="f8N-7a-67v"/>
@@ -41,13 +41,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8C-WA-m3q">
-                                                <rect key="frame" x="20" y="110" width="295" height="41"/>
+                                                <rect key="frame" x="20" y="110" width="334" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-Sn-B3x">
-                                                <rect key="frame" x="127" y="161" width="81.5" height="16"/>
+                                                <rect key="frame" x="146.5" y="161" width="81.5" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUk-mF-h3T">
                                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="16"/>
@@ -77,17 +77,17 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xjG-oQ-Br5">
-                                                <rect key="frame" x="20" y="217" width="295" height="192"/>
+                                                <rect key="frame" x="20" y="217" width="334" height="393"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-Fb-5AF" userLabel="Line">
-                                                        <rect key="frame" x="25" y="0.0" width="245" height="1"/>
+                                                        <rect key="frame" x="25" y="0.0" width="284" height="1"/>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="QSp-SS-Pvh"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jqb-kU-4uG">
-                                                        <rect key="frame" x="139" y="14" width="17.5" height="20.5"/>
+                                                        <rect key="frame" x="158.5" y="39.5" width="17.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEQ-Qg-iZI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="17.5" height="20.5"/>
@@ -98,14 +98,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZB-fg-EV4" userLabel="Line">
-                                                        <rect key="frame" x="25" y="48" width="245" height="1"/>
+                                                        <rect key="frame" x="25" y="98" width="284" height="1"/>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="hAu-pl-QAE"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4IB-jp-148">
-                                                        <rect key="frame" x="139" y="62" width="17.5" height="20.5"/>
+                                                        <rect key="frame" x="158.5" y="137.5" width="17.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-1U-k9b">
                                                                 <rect key="frame" x="0.0" y="0.0" width="17.5" height="20.5"/>
@@ -116,14 +116,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROI-AO-GwQ" userLabel="Line">
-                                                        <rect key="frame" x="25" y="95.5" width="245" height="1"/>
+                                                        <rect key="frame" x="25" y="196" width="284" height="1"/>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="0Bp-sB-iiF"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-GB-yfB">
-                                                        <rect key="frame" x="139" y="109.5" width="17.5" height="20.5"/>
+                                                        <rect key="frame" x="158.5" y="235.5" width="17.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNl-Wd-Gdj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="17.5" height="20.5"/>
@@ -134,14 +134,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-7w-lEM" userLabel="Line">
-                                                        <rect key="frame" x="25" y="143.5" width="245" height="1"/>
+                                                        <rect key="frame" x="25" y="294" width="284" height="1"/>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="CL3-BD-Shv"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-bC-cbI">
-                                                        <rect key="frame" x="139" y="157.5" width="17.5" height="20.5"/>
+                                                        <rect key="frame" x="158.5" y="333.5" width="17.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAn-bw-yOF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="17.5" height="20.5"/>
@@ -152,7 +152,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTY-Xr-jFo" userLabel="Line">
-                                                        <rect key="frame" x="25" y="191" width="245" height="1"/>
+                                                        <rect key="frame" x="25" y="392" width="284" height="1"/>
                                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="A4G-me-1yN"/>
@@ -161,14 +161,18 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="nZB-fg-EV4" secondAttribute="trailing" constant="25" id="4eF-K5-hXY"/>
+                                                    <constraint firstItem="VkR-GB-yfB" firstAttribute="height" secondItem="Jqb-kU-4uG" secondAttribute="height" id="6n2-EO-JDd"/>
                                                     <constraint firstItem="pTY-Xr-jFo" firstAttribute="leading" secondItem="xjG-oQ-Br5" secondAttribute="leading" constant="25" id="KQL-I8-xXC"/>
                                                     <constraint firstItem="nZB-fg-EV4" firstAttribute="leading" secondItem="xjG-oQ-Br5" secondAttribute="leading" constant="25" id="MQD-A2-BeD"/>
                                                     <constraint firstAttribute="trailing" secondItem="pTY-Xr-jFo" secondAttribute="trailing" constant="25" id="NzL-r8-3Zr"/>
                                                     <constraint firstAttribute="trailing" secondItem="GCN-7w-lEM" secondAttribute="trailing" constant="25" id="P3q-aQ-ZYR"/>
                                                     <constraint firstItem="ROI-AO-GwQ" firstAttribute="leading" secondItem="xjG-oQ-Br5" secondAttribute="leading" constant="25" id="QoZ-hz-leK"/>
+                                                    <constraint firstItem="4IB-jp-148" firstAttribute="height" secondItem="Jqb-kU-4uG" secondAttribute="height" id="U1K-4C-djH"/>
                                                     <constraint firstItem="nlA-Fb-5AF" firstAttribute="leading" secondItem="xjG-oQ-Br5" secondAttribute="leading" constant="25" id="UhZ-5R-MXb"/>
+                                                    <constraint firstItem="i5h-bC-cbI" firstAttribute="height" secondItem="Jqb-kU-4uG" secondAttribute="height" id="XbO-Xa-pdb"/>
                                                     <constraint firstAttribute="trailing" secondItem="ROI-AO-GwQ" secondAttribute="trailing" constant="25" id="aLP-BL-EqN"/>
                                                     <constraint firstItem="GCN-7w-lEM" firstAttribute="leading" secondItem="xjG-oQ-Br5" secondAttribute="leading" constant="25" id="hKZ-Wh-mm0"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="393" id="pQP-m6-tf7"/>
                                                     <constraint firstAttribute="trailing" secondItem="nlA-Fb-5AF" secondAttribute="trailing" constant="25" id="rBR-P4-OGs"/>
                                                 </constraints>
                                             </stackView>
@@ -179,7 +183,6 @@
                                             <constraint firstItem="xjG-oQ-Br5" firstAttribute="leading" secondItem="rwQ-E0-Yn9" secondAttribute="leading" constant="20" id="66u-x2-eJv"/>
                                             <constraint firstItem="z8C-WA-m3q" firstAttribute="leading" secondItem="rwQ-E0-Yn9" secondAttribute="leading" constant="20" id="BJJ-ap-nkS"/>
                                             <constraint firstItem="Wk3-Mn-hYn" firstAttribute="centerX" secondItem="rwQ-E0-Yn9" secondAttribute="centerX" id="Euc-BG-hw6"/>
-                                            <constraint firstAttribute="height" constant="410" id="KqN-Sq-JEE"/>
                                             <constraint firstAttribute="bottom" secondItem="xjG-oQ-Br5" secondAttribute="bottom" id="O7x-Bt-X3z"/>
                                             <constraint firstItem="z8C-WA-m3q" firstAttribute="top" secondItem="Wk3-Mn-hYn" secondAttribute="bottom" constant="10" id="ODA-rP-li0"/>
                                             <constraint firstItem="xjG-oQ-Br5" firstAttribute="top" secondItem="Whz-Sn-B3x" secondAttribute="bottom" constant="40" id="PoE-Iy-rW8"/>
@@ -195,7 +198,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi0-Mx-Lc6" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="479" width="335" height="45"/>
+                                        <rect key="frame" x="20" y="660" width="374" height="45"/>
                                         <color key="backgroundColor" red="0.69599705934524536" green="0.19990140199661255" blue="0.16949647665023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="3NW-VA-vM6"/>
@@ -219,7 +222,7 @@
                                     <constraint firstItem="rwQ-E0-Yn9" firstAttribute="top" secondItem="daj-Kb-Fm4" secondAttribute="top" constant="20" id="ZWL-sX-PVk"/>
                                     <constraint firstItem="Xi0-Mx-Lc6" firstAttribute="centerX" secondItem="rwQ-E0-Yn9" secondAttribute="centerX" id="dfW-uy-fdS"/>
                                     <constraint firstAttribute="trailing" secondItem="rwQ-E0-Yn9" secondAttribute="trailing" constant="20" id="ggf-39-SoN"/>
-                                    <constraint firstItem="Xi0-Mx-Lc6" firstAttribute="top" secondItem="rwQ-E0-Yn9" secondAttribute="bottom" constant="50" id="m9i-in-mck"/>
+                                    <constraint firstItem="Xi0-Mx-Lc6" firstAttribute="top" secondItem="rwQ-E0-Yn9" secondAttribute="bottom" constant="30" id="m9i-in-mck"/>
                                     <constraint firstAttribute="bottom" secondItem="Xi0-Mx-Lc6" secondAttribute="bottom" id="x6W-pa-Mcx"/>
                                     <constraint firstItem="rwQ-E0-Yn9" firstAttribute="centerX" secondItem="daj-Kb-Fm4" secondAttribute="centerX" id="xOa-eE-am5"/>
                                 </constraints>
@@ -229,7 +232,7 @@
                         <constraints>
                             <constraint firstItem="daj-Kb-Fm4" firstAttribute="top" secondItem="qv2-67-zdq" secondAttribute="top" id="3AH-jk-ZRo"/>
                             <constraint firstItem="rwQ-E0-Yn9" firstAttribute="leading" secondItem="nyC-uq-2D4" secondAttribute="leading" constant="20" id="7JU-rc-lTA"/>
-                            <constraint firstItem="Xi0-Mx-Lc6" firstAttribute="bottom" secondItem="qv2-67-zdq" secondAttribute="bottom" constant="-30" id="IvU-4W-c91"/>
+                            <constraint firstItem="Xi0-Mx-Lc6" firstAttribute="bottom" secondItem="qv2-67-zdq" secondAttribute="bottom" constant="-20" id="IvU-4W-c91"/>
                             <constraint firstItem="daj-Kb-Fm4" firstAttribute="trailing" secondItem="qv2-67-zdq" secondAttribute="trailing" id="JlL-G1-Lps"/>
                             <constraint firstAttribute="bottom" secondItem="daj-Kb-Fm4" secondAttribute="bottom" id="L43-05-UWj"/>
                             <constraint firstItem="daj-Kb-Fm4" firstAttribute="leading" secondItem="qv2-67-zdq" secondAttribute="leading" id="eB5-T9-AFK"/>
@@ -268,23 +271,23 @@
             <objects>
                 <viewController id="3ys-ak-af8" customClass="EditProfileController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbm-1L-lEf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIF-7i-UO6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W3J-ZC-ccI">
-                                        <rect key="frame" x="20" y="20" width="335" height="280"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="280"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAR-5s-Qeo">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="220"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="220"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cEZ-hE-c1z">
-                                                        <rect key="frame" x="5" y="5" width="325" height="210"/>
+                                                        <rect key="frame" x="5" y="5" width="364" height="210"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tw0-II-JP3" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="1ta-hT-4HP"/>
                                                                 </constraints>
@@ -298,7 +301,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L63-Fy-9fS" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="55" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="55" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="dHV-7F-Ehu"/>
                                                                 </constraints>
@@ -312,7 +315,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-gY-G3u" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="110" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="110" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="XPZ-c3-X6s"/>
                                                                 </constraints>
@@ -326,7 +329,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MSSV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-qP-ErL" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="165" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="165" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="ju3-uN-CzJ"/>
                                                                 </constraints>
@@ -350,7 +353,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WII-85-4oD" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="235" width="335" height="45"/>
+                                                <rect key="frame" x="0.0" y="235" width="374" height="45"/>
                                                 <color key="backgroundColor" red="0.92564290760000001" green="0.42983454469999999" blue="0.18452611569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="daC-Id-Cmh"/>
@@ -374,16 +377,16 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zKJ-E0-NN0">
-                                        <rect key="frame" x="20" y="320" width="335" height="170"/>
+                                        <rect key="frame" x="20" y="320" width="374" height="170"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-WV-W85">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-Db-P54">
-                                                        <rect key="frame" x="5" y="5" width="325" height="100"/>
+                                                        <rect key="frame" x="5" y="5" width="364" height="100"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-GS-tWs" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="ztc-F9-QBf"/>
                                                                 </constraints>
@@ -397,7 +400,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-vx-yQg" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="55" width="325" height="45"/>
+                                                                <rect key="frame" x="0.0" y="55" width="364" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="3HH-aG-Jym"/>
                                                                 </constraints>
@@ -421,7 +424,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-Cq-nwx" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="125" width="335" height="45"/>
+                                                <rect key="frame" x="0.0" y="125" width="374" height="45"/>
                                                 <color key="backgroundColor" red="0.92564290760000001" green="0.42983454469999999" blue="0.18452611569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="ifY-6C-dvi"/>
@@ -467,7 +470,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="I6X-R9-aWR">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" image="Back Chevron" id="7jK-MF-KU0">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButton:" destination="3ys-ak-af8" id="acj-YY-8N9"/>
                             </connections>
@@ -477,6 +480,7 @@
                         <outlet property="backButton" destination="7jK-MF-KU0" id="znV-4g-B5i"/>
                         <outlet property="changeButton" destination="rfb-Cq-nwx" id="wbl-Qd-LiX"/>
                         <outlet property="classMemberLabel" destination="L63-Fy-9fS" id="Dpi-U4-lBz"/>
+                        <outlet property="contraintBottom" destination="xI6-gI-apW" id="VSO-F1-Fi3"/>
                         <outlet property="mssvLabel" destination="V8S-qP-ErL" id="8bf-65-YAX"/>
                         <outlet property="passwordTextfield" destination="Ed2-GS-tWs" id="2Oa-I5-EWb"/>
                         <outlet property="plate" destination="EPQ-gY-G3u" id="5T0-La-5hX"/>
@@ -495,32 +499,32 @@
             <objects>
                 <viewController id="K7R-tt-el5" customClass="MoreController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q4g-0s-nGm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5s-it-cpu">
-                                <rect key="frame" x="0.0" y="126" width="375" height="541"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="88" id="4Qb-pX-BFf" customClass="HistoryCell" customModule="Parking_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Qb-pX-BFf" id="zep-i6-9sc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYu-vw-r0m">
-                                                    <rect key="frame" x="10" y="10" width="355" height="67.5"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="67.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri Apr 26 2019 15:07:50 GMT+0700 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NP2-kT-a8X">
-                                                            <rect key="frame" x="10" y="25.5" width="290" height="17"/>
+                                                            <rect key="frame" x="10" y="25.5" width="329" height="17"/>
                                                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <color key="shadowColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in_failed" translatesAutoresizingMaskIntoConstraints="NO" id="b4i-XJ-KHJ">
-                                                            <rect key="frame" x="305" y="20" width="50" height="27.5"/>
+                                                            <rect key="frame" x="344" y="20" width="50" height="27.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="uBn-dQ-V3q"/>
                                                             </constraints>
@@ -552,7 +556,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: 0 times" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4j-HX-wdq">
-                                <rect key="frame" x="131" y="84" width="113" height="22"/>
+                                <rect key="frame" x="150.5" y="108" width="113" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -587,26 +591,26 @@
             <objects>
                 <viewController storyboardIdentifier="loginVC" id="f0I-Qo-CN2" customClass="LoginController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eiH-LY-HXK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-4q-f91">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin-1" translatesAutoresizingMaskIntoConstraints="NO" id="UuO-TB-kz3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-c3-UUq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L9T-Vr-thC">
-                                        <rect key="frame" x="20" y="181.5" width="335" height="240"/>
+                                        <rect key="frame" x="20" y="267" width="374" height="240"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4ef-aT-hQE">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MSSV" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-ML-Z3x" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -628,7 +632,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Und-dZ-wgf" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="65" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="65" width="374" height="45"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -652,10 +656,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nby-yj-nwy">
-                                                <rect key="frame" x="0.0" y="140" width="335" height="100"/>
+                                                <rect key="frame" x="0.0" y="140" width="374" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKs-m7-pD3" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="bBt-Mf-tq6"/>
@@ -676,7 +680,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-qx-INl" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="55" width="374" height="45"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="8In-KJ-41f"/>
@@ -706,13 +710,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0QX-8i-mK2">
-                                        <rect key="frame" x="84" y="20" width="207.5" height="101.5"/>
+                                        <rect key="frame" x="103.5" y="20" width="207.5" height="187"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_welcom" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-oc-6D4">
-                                                <rect key="frame" x="0.0" y="0.0" width="35" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="187"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking-lot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUV-JU-6zy">
-                                                <rect key="frame" x="55" y="0.0" width="152.5" height="101.5"/>
+                                                <rect key="frame" x="55" y="0.0" width="152.5" height="187"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -754,6 +758,7 @@
                     <navigationItem key="navigationItem" id="y0h-RO-IPa"/>
                     <connections>
                         <outlet property="emailTxt" destination="QQd-ML-Z3x" id="dOj-Fw-Ei4"/>
+                        <outlet property="imageLogo" destination="nKx-oc-6D4" id="A7C-fU-yWY"/>
                         <outlet property="loginButton" destination="DKs-m7-pD3" id="6Jo-x9-yWO"/>
                         <outlet property="passwordTxt" destination="Und-dZ-wgf" id="j7e-Y0-wKw"/>
                         <outlet property="scrollView" destination="mZz-c3-UUq" id="oO4-Bz-7fY"/>
@@ -768,20 +773,20 @@
             <objects>
                 <viewController id="FdC-F2-YyA" customClass="RegisterController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I00-42-j3T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq4-Ld-D6h">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rX-KQ-skV">
-                                        <rect key="frame" x="20" y="40" width="335" height="350"/>
+                                        <rect key="frame" x="20" y="40" width="374" height="350"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JcL-6h-9A8">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="350"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="350"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="99m-EN-Jre" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="stc-9H-Wjr"/>
                                                         </constraints>
@@ -795,7 +800,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uut-Y0-Ro8" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="61" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="61" width="374" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next"/>
@@ -806,7 +811,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VT9-Hc-cb7" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="122" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="122" width="374" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next"/>
@@ -817,7 +822,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MSSV  (9 numbers)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lkF-kn-KQS" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="183" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="183" width="374" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next"/>
@@ -828,7 +833,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password  (6 characters)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ddD-q5-g02" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="244" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="244" width="374" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="next" secureTextEntry="YES"/>
@@ -839,7 +844,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password  (6 characters)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-df-0PZ" customClass="CustomTextField" customModule="Parking_App" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="305" width="335" height="45"/>
+                                                        <rect key="frame" x="0.0" y="305" width="374" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="done" secureTextEntry="YES"/>
@@ -867,7 +872,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-vE-iw6" customClass="CustomButton" customModule="Parking_App" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="420" width="335" height="45"/>
+                                        <rect key="frame" x="20" y="420" width="374" height="45"/>
                                         <color key="backgroundColor" red="0.92564290760000001" green="0.42983454469999999" blue="0.18452611569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="xOV-iu-m80"/>
@@ -919,6 +924,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="classTextField" destination="uut-Y0-Ro8" id="25p-8h-Sfd"/>
+                        <outlet property="constraintBottom" destination="zW0-cV-nGU" id="d0H-cn-rZ9"/>
                         <outlet property="mssvTextField" destination="lkF-kn-KQS" id="2AC-N0-ESi"/>
                         <outlet property="passwordTextField" destination="ddD-q5-g02" id="X8u-ZI-Yqf"/>
                         <outlet property="plateTextField" destination="VT9-Hc-cb7" id="gre-gg-lCD"/>
@@ -937,26 +943,26 @@
             <objects>
                 <viewController storyboardIdentifier="homeVC" id="zhB-zA-Cjp" customClass="HomeController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="homeVC" id="HLd-G9-ck4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBg" translatesAutoresizingMaskIntoConstraints="NO" id="Nby-gf-Cpw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin-1" translatesAutoresizingMaskIntoConstraints="NO" id="gH3-18-e3q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account has 20 days left !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-HR-Tln">
-                                <rect key="frame" x="20" y="194" width="335" height="78.5"/>
+                                <rect key="frame" x="20" y="218" width="374" height="351"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qq-sj-cxY">
-                                <rect key="frame" x="20" y="414" width="335" height="150"/>
+                                <rect key="frame" x="20" y="609" width="374" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-Eu-7P5">
-                                        <rect key="frame" x="44" y="50.5" width="247.5" height="49"/>
+                                        <rect key="frame" x="63.5" y="50.5" width="247.5" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email    : parkingapp@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXb-tL-zaX">
                                                 <rect key="frame" x="0.0" y="0.0" width="247.5" height="20.5"/>
@@ -973,7 +979,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGB-yA-8HI">
-                                        <rect key="frame" x="10" y="10" width="83.5" height="24"/>
+                                        <rect key="frame" x="10" y="10" width="122.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <nil key="highlightedColor"/>
@@ -981,6 +987,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SGB-yA-8HI" firstAttribute="top" secondItem="3Qq-sj-cxY" secondAttribute="top" constant="10" id="IIf-DP-Zn4"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SGB-yA-8HI" secondAttribute="trailing" constant="241.5" id="MS8-NA-G76"/>
                                     <constraint firstItem="SGB-yA-8HI" firstAttribute="leading" secondItem="3Qq-sj-cxY" secondAttribute="leading" constant="10" id="QTs-iN-UJ8"/>
                                     <constraint firstAttribute="height" constant="150" id="bWn-1a-94H"/>
                                     <constraint firstItem="Plh-Eu-7P5" firstAttribute="centerX" secondItem="3Qq-sj-cxY" secondAttribute="centerX" id="crE-mZ-cy4"/>
@@ -1003,7 +1010,8 @@
                             <constraint firstItem="gH3-18-e3q" firstAttribute="bottom" secondItem="Nby-gf-Cpw" secondAttribute="bottom" id="idc-ZE-fso"/>
                             <constraint firstItem="gH3-18-e3q" firstAttribute="top" secondItem="Nby-gf-Cpw" secondAttribute="top" id="ivD-wT-SdZ"/>
                             <constraint firstItem="Nby-gf-Cpw" firstAttribute="top" secondItem="HLd-G9-ck4" secondAttribute="top" id="oXv-aJ-mFz"/>
-                            <constraint firstItem="g4g-HR-Tln" firstAttribute="top" secondItem="BQW-l2-GFy" secondAttribute="top" constant="130" id="umP-Zk-NQ8"/>
+                            <constraint firstItem="3Qq-sj-cxY" firstAttribute="top" secondItem="g4g-HR-Tln" secondAttribute="bottom" constant="40" id="qza-eB-fl7"/>
+                            <constraint firstItem="g4g-HR-Tln" firstAttribute="top" relation="lessThanOrEqual" secondItem="BQW-l2-GFy" secondAttribute="top" constant="130" id="umP-Zk-NQ8"/>
                             <constraint firstItem="3Qq-sj-cxY" firstAttribute="centerX" secondItem="HLd-G9-ck4" secondAttribute="centerX" id="zJV-7G-2gE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BQW-l2-GFy"/>
@@ -1031,13 +1039,13 @@
             <objects>
                 <tabBarController storyboardIdentifier="tabbarVC" id="syD-Mp-pIl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5Sp-fK-mkp"/>
-                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="17O-Ck-jIq">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="17O-Ck-jIq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.17240840196609497" green="0.17282161116600037" blue="0.17630553245544434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="barTintColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="selectedImageTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.60234268137807212" green="0.58954168485494707" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Eau-cX-Kzq" kind="relationship" relationship="viewControllers" id="GQP-wp-K2F"/>
@@ -1055,7 +1063,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7OV-DC-9F1" customClass="NavController" customModule="Parking_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="07h-Jz-FoX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1074,7 +1082,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="a70-Xf-8tY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qlm-s6-Ohp">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1093,7 +1101,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="NhC-0n-Uu1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VPn-mw-nWr">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1112,7 +1120,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="04k-HH-EMd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eg3-yE-7UI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
